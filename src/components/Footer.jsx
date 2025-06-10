@@ -1,158 +1,196 @@
+"use client"
+import { Link } from "react-router-dom"
+import { Facebook, Instagram, Twitter, Youtube } from "lucide-react"
+
 const Footer = () => {
   return (
-    <footer
-      className="bg-white border-top mt-5"
-      style={{
-        borderColor: "#e0e0e0",
-        fontFamily: "Poppins",
-      }}
-    >
-      <div className="container" style={{ maxWidth: "1200px" }}>
-        <div className="row py-5">
-          <div className="col-12 col-md-6 col-lg-3 mb-4">
-            <h2
-              className="fw-bold mb-4"
-              style={{
-                fontSize: "24px",
-                color: "#000",
-              }}
-            >
-              Funiro.
-            </h2>
-            <p
-              className="text-muted"
-              style={{
-                fontSize: "14px",
-                lineHeight: "1.5",
-                color: "#666",
-              }}
-            >
-              400 University Drive Suite 200 Coral
-              <br />
-              Gables,
-              <br />
-              FL 33134 USA
+    <footer className="bg-dark text-white pt-5">
+      <div className="container pb-5">
+        <div className="row g-4">
+          {/* Brand */}
+          <div className="col-lg-3 col-md-6">
+            <div className="d-flex align-items-center mb-4">
+              <div
+                className="rounded-2"
+                style={{ width: "32px", height: "32px", background: "linear-gradient(to right, #1976d2, #9c27b0)" }}
+              ></div>
+              <span className="ms-2 fs-4 fw-bold">PhoneStore</span>
+            </div>
+            <p className="text-secondary mb-4">
+              Cửa hàng công nghệ hàng đầu, cung cấp những sản phẩm điện thoại và laptop chất lượng cao với giá cả hợp
+              lý.
             </p>
-          </div>
-
-          <div className="col-12 col-md-6 col-lg-3 mb-4">
-            <h3
-              className="mb-3"
-              style={{
-                color: "#9f9f9f",
-                fontSize: "16px",
-                fontWeight: "500",
-              }}
-            >
-              Links
-            </h3>
-            <ul className="list-unstyled">
-              <li className="mb-3">
-                <a href="#" className="text-decoration-none text-dark fw-medium" style={{ fontSize: "16px" }}>
-                  Home
-                </a>
-              </li>
-              <li className="mb-3">
-                <a href="#" className="text-decoration-none text-dark fw-medium" style={{ fontSize: "16px" }}>
-                  Shop
-                </a>
-              </li>
-              <li className="mb-3">
-                <a href="#" className="text-decoration-none text-dark fw-medium" style={{ fontSize: "16px" }}>
-                  About
-                </a>
-              </li>
-              <li className="mb-3">
-                <a href="#" className="text-decoration-none text-dark fw-medium" style={{ fontSize: "16px" }}>
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="col-12 col-md-6 col-lg-3 mb-4">
-            <h3
-              className="mb-3"
-              style={{
-                color: "#9f9f9f",
-                fontSize: "16px",
-                fontWeight: "500",
-              }}
-            >
-              Help
-            </h3>
-            <ul className="list-unstyled">
-              <li className="mb-3">
-                <a href="#" className="text-decoration-none text-dark fw-medium" style={{ fontSize: "16px" }}>
-                  Payment Options
-                </a>
-              </li>
-              <li className="mb-3">
-                <a href="#" className="text-decoration-none text-dark fw-medium" style={{ fontSize: "16px" }}>
-                  Returns
-                </a>
-              </li>
-              <li className="mb-3">
-                <a href="#" className="text-decoration-none text-dark fw-medium" style={{ fontSize: "16px" }}>
-                  Privacy Policies
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="col-12 col-md-6 col-lg-3 mb-4">
-            <h3
-              className="mb-3"
-              style={{
-                color: "#9f9f9f",
-                fontSize: "16px",
-                fontWeight: "500",
-              }}
-            >
-              Newsletter
-            </h3>
-            <form className="d-flex gap-2">
-              <input
-                type="email"
-                placeholder="Enter Your Email Address"
-                className="form-control border-0 border-bottom"
-                style={{
-                  borderColor: "#333 !important",
-                  borderRadius: "0",
-                  fontSize: "12px",
-                  boxShadow: "none",
-                }}
-                required
-              />
-              <button
-                type="submit"
-                className="btn border-0 border-bottom fw-bold"
-                style={{
-                  borderColor: "#333 !important",
-                  borderRadius: "0",
-                  fontSize: "14px",
-                  background: "none",
-                  color: "#000",
-                }}
+            <div className="d-flex gap-3">
+              <Link
+                to="#"
+                className="text-secondary"
+                style={{ transition: "color 0.3s" }}
+                onMouseEnter={(e) => (e.target.style.color = "#fff")}
+                onMouseLeave={(e) => (e.target.style.color = "#6c757d")}
               >
-                SUBSCRIBE
+                <Facebook size={20} />
+              </Link>
+              <Link
+                to="#"
+                className="text-secondary"
+                style={{ transition: "color 0.3s" }}
+                onMouseEnter={(e) => (e.target.style.color = "#fff")}
+                onMouseLeave={(e) => (e.target.style.color = "#6c757d")}
+              >
+                <Instagram size={20} />
+              </Link>
+              <Link
+                to="#"
+                className="text-secondary"
+                style={{ transition: "color 0.3s" }}
+                onMouseEnter={(e) => (e.target.style.color = "#fff")}
+                onMouseLeave={(e) => (e.target.style.color = "#6c757d")}
+              >
+                <Twitter size={20} />
+              </Link>
+              <Link
+                to="#"
+                className="text-secondary"
+                style={{ transition: "color 0.3s" }}
+                onMouseEnter={(e) => (e.target.style.color = "#fff")}
+                onMouseLeave={(e) => (e.target.style.color = "#6c757d")}
+              >
+                <Youtube size={20} />
+              </Link>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="col-lg-3 col-md-6">
+            <h3 className="fs-5 fw-semibold mb-4">Liên kết nhanh</h3>
+            <ul className="list-unstyled">
+              <li className="mb-2">
+                <Link
+                  to="/"
+                  className="text-secondary text-decoration-none"
+                  style={{ transition: "color 0.3s" }}
+                  onMouseEnter={(e) => (e.target.style.color = "#fff")}
+                  onMouseLeave={(e) => (e.target.style.color = "#6c757d")}
+                >
+                  Trang chủ
+                </Link>
+              </li>
+              <li className="mb-2">
+                <Link
+                  to="/shop"
+                  className="text-secondary text-decoration-none"
+                  style={{ transition: "color 0.3s" }}
+                  onMouseEnter={(e) => (e.target.style.color = "#fff")}
+                  onMouseLeave={(e) => (e.target.style.color = "#6c757d")}
+                >
+                  Cửa hàng
+                </Link>
+              </li>
+              <li className="mb-2">
+                <Link
+                  to="/blog"
+                  className="text-secondary text-decoration-none"
+                  style={{ transition: "color 0.3s" }}
+                  onMouseEnter={(e) => (e.target.style.color = "#fff")}
+                  onMouseLeave={(e) => (e.target.style.color = "#6c757d")}
+                >
+                  Blog
+                </Link>
+              </li>
+              <li className="mb-2">
+                <Link
+                  to="/contact"
+                  className="text-secondary text-decoration-none"
+                  style={{ transition: "color 0.3s" }}
+                  onMouseEnter={(e) => (e.target.style.color = "#fff")}
+                  onMouseLeave={(e) => (e.target.style.color = "#6c757d")}
+                >
+                  Liên hệ
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Support */}
+          <div className="col-lg-3 col-md-6">
+            <h3 className="fs-5 fw-semibold mb-4">Hỗ trợ</h3>
+            <ul className="list-unstyled">
+              <li className="mb-2">
+                <Link
+                  to="/payment"
+                  className="text-secondary text-decoration-none"
+                  style={{ transition: "color 0.3s" }}
+                  onMouseEnter={(e) => (e.target.style.color = "#fff")}
+                  onMouseLeave={(e) => (e.target.style.color = "#6c757d")}
+                >
+                  Phương thức thanh toán
+                </Link>
+              </li>
+              <li className="mb-2">
+                <Link
+                  to="/returns"
+                  className="text-secondary text-decoration-none"
+                  style={{ transition: "color 0.3s" }}
+                  onMouseEnter={(e) => (e.target.style.color = "#fff")}
+                  onMouseLeave={(e) => (e.target.style.color = "#6c757d")}
+                >
+                  Chính sách đổi trả
+                </Link>
+              </li>
+              <li className="mb-2">
+                <Link
+                  to="/privacy"
+                  className="text-secondary text-decoration-none"
+                  style={{ transition: "color 0.3s" }}
+                  onMouseEnter={(e) => (e.target.style.color = "#fff")}
+                  onMouseLeave={(e) => (e.target.style.color = "#6c757d")}
+                >
+                  Chính sách bảo mật
+                </Link>
+              </li>
+              <li className="mb-2">
+                <Link
+                  to="/terms"
+                  className="text-secondary text-decoration-none"
+                  style={{ transition: "color 0.3s" }}
+                  onMouseEnter={(e) => (e.target.style.color = "#fff")}
+                  onMouseLeave={(e) => (e.target.style.color = "#6c757d")}
+                >
+                  Điều khoản sử dụng
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Newsletter */}
+          <div className="col-lg-3 col-md-6">
+            <h3 className="fs-5 fw-semibold mb-4">Đăng ký nhận tin</h3>
+            <p className="text-secondary mb-3">Nhận thông tin về sản phẩm mới và ưu đãi đặc biệt</p>
+            <form className="mb-3">
+              <div className="mb-3">
+                <input
+                  type="email"
+                  className="form-control bg-dark border-secondary text-white"
+                  placeholder="Nhập email của bạn"
+                  required
+                />
+              </div>
+              <button type="submit" className="btn btn-primary w-100">
+                Đăng ký
               </button>
             </form>
           </div>
         </div>
+      </div>
 
-        <div className="border-top pt-4 text-start" style={{ borderColor: "#e0e0e0" }}>
-          <p
-            className="mb-0"
-            style={{
-              fontSize: "16px",
-              color: "#000",
-            }}
-          >
-            2023 Funiro. All rights reserved
-          </p>
+      <div className="border-top border-secondary py-4">
+        <div className="container">
+          <p className="text-secondary text-center mb-0">© 2024 PhoneStore. Tất cả quyền được bảo lưu.</p>
         </div>
       </div>
+
+      {/* Spacer for mobile bottom navigation */}
+      <div className="d-block d-md-none" style={{ height: "64px" }}></div>
     </footer>
   )
 }

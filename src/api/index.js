@@ -1,26 +1,34 @@
-import axios from "axios";
-
+import axios from "axios"
 
 const api = axios.create({
-    baseURL: "https://duong-json-server.onrender.com/",
-    headers: {
-        "Content-Type": "application/json",
-    },
-});
+  baseURL: "http://localhost:5000/api",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  withCredentials: true, // Để hỗ trợ credentials trong CORS
+})
 
 api.interceptors.request.use(
-    function (config) {
-        console.log(config)
-        const accessToken = localStorage.getItem("accessToken");
-        if(accessToken){
-            config.headers.Authorization = `Bearer ${accessToken}`;
-        }
-        console.log(config)
-        return config
-    },
-    function (error) {
-        return Promise.reject(error);
+  (config) => {
+    const accessToken = localStorage.getItem("accessToken")
+    if (accessToken) {
+      config.headers.Authorization = `Bearer ${accessToken}`
     }
+    return config
+  },
+  (error) => Promise.reject(error),
 )
 
-export default api;
+// Interceptor để xử lý response
+api.interceptors.response.use(
+  (response) => {
+    // Trả về dữ liệu nếu response thành công
+    return response
+  },
+  (error) => {
+    console.error("API Error:", error.response?.data || error.message)
+    return Promise.reject(error)
+  },
+)
+
+export default api

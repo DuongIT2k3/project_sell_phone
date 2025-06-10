@@ -10,11 +10,13 @@ import BlogDetail from "../pages/client/BlogDetail"
 import BlogListPage from "../pages/client/BlogListPage"
 import ProfilePage from "../pages/client/ProfilePage"
 import OrderPage from "../pages/client/OrderPage"
+import ShopPage from "../pages/client/ShopPage"
 
 export const ClientRoutes = [
     // common
     {index: true, element: <HomePage />},
     {path: "about", element: <AboutPage />},
+    {path: "shop", element: <ShopPage />},
     {path: "contact", element: <ContactPage />},
 
     //products

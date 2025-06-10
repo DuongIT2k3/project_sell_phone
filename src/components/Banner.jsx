@@ -1,84 +1,60 @@
+import { Link } from "react-router-dom"
+import { ArrowRight } from "lucide-react"
+
 const Banner = () => {
   return (
-    <div className="container-fluid p-0" style={{ backgroundColor: "#fff", overflow: "hidden" }}>
+    <section className="position-relative" style={{ minHeight: "600px" }}>
+      {/* Background Image */}
       <div
-        className="row g-0 align-items-center"
+        className="position-absolute top-0 start-0 end-0 bottom-0 bg-dark"
         style={{
-          minHeight: "calc(100vh - 100px)",
-          backgroundImage: "url(/src/assets/images/home-banner.png)",
+          backgroundImage:
+            "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/placeholder.svg?height=700&width=1400')",
           backgroundSize: "cover",
-          backgroundPosition: "center 70%",
+          backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          padding: "0 1%",
         }}
-      >
-        <div className="col-xl-6 col-lg-6 col-md-4 d-none d-md-block"></div>
+      />
 
-        <div className="col-xl-6 col-lg-6 col-md-8 col-12 d-flex justify-content-start align-items-center">
-          <div
-            className="p-4 p-lg-5"
-            style={{
-              borderRadius: "10px",
-              backgroundColor: "#FFF3E3",
-              maxWidth: "500px",
-              width: "100%",
-              zIndex: 2,
-              margin: "0 1rem",
-            }}
-          >
-            <span
-              className="d-block mb-2"
-              style={{
-                color: "#333",
-                fontSize: "16px",
-                fontWeight: "600",
-                letterSpacing: "3px",
-              }}
-            >
-              New Arrival
-            </span>
-
-            <span
-              className="d-block mb-3"
-              style={{
-                color: "#B88E2F",
-                fontSize: "52px",
-                fontWeight: "700",
-                lineHeight: "1.2",
-              }}
-            >
-              Discover Our New Collection
-            </span>
-
-            <div
-              className="mb-4"
-              style={{
-                color: "#333",
-                fontSize: "18px",
-                fontWeight: "500",
-                lineHeight: "24px",
-              }}
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.
+      {/* Content */}
+      <div className="container position-relative" style={{ zIndex: 10, height: "600px" }}>
+        <div className="row h-100 align-items-center">
+          <div className="col-12 col-lg-6 text-white">
+            <h1 className="display-4 fw-bold mb-4">
+              Khám phá thế giới
+              <span className="d-block text-info">công nghệ mới</span>
+            </h1>
+            <p className="fs-5 mb-4 text-white-50">
+              Tìm kiếm những chiếc điện thoại và laptop tốt nhất với giá cả hợp lý. Trải nghiệm công nghệ đỉnh cao ngay
+              hôm nay.
+            </p>
+            <div className="d-flex flex-column flex-sm-row gap-3">
+              <Link
+                to="/shop"
+                className="btn btn-primary btn-lg d-inline-flex align-items-center"
+                style={{ transition: "all 0.3s" }}
+              >
+                Mua sắm ngay
+                <ArrowRight className="ms-2" size={20} />
+              </Link>
+              <Link to="/categories" className="btn btn-outline-light btn-lg">
+                Xem danh mục
+              </Link>
             </div>
-
-            <a
-              href="./shop.html"
-              className="btn text-white text-uppercase fw-bold"
-              style={{
-                backgroundColor: "#B88E2F",
-                padding: "25px 72px",
-                fontSize: "16px",
-                border: "none",
-                textDecoration: "none",
-              }}
-            >
-              BUY Now
-            </a>
           </div>
         </div>
       </div>
-    </div>
+
+      {/* Decorative Elements */}
+      <div className="position-absolute bottom-0 end-0 d-none d-lg-block p-4">
+        <div
+          className="border border-2 border-white opacity-25 rounded-circle d-flex align-items-center justify-content-center"
+          style={{ width: "80px", height: "80px" }}
+        >
+          <div className="bg-white opacity-25 rounded-circle" style={{ width: "48px", height: "48px" }}></div>
+        </div>
+      </div>
+    </section>
   )
 }
 
